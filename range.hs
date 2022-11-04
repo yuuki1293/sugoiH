@@ -7,3 +7,4 @@ inf = [13,26..]
 tak = take 24 inf
 cyc = take 10 (cycle [1,2,3])
 cyc' = take 12 (cycle "LOL ")
+rep = take 10 (repeat 5)
