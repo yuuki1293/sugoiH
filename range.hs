@@ -1,3 +1,5 @@
 ranNum = [1..20]
 ranChar = ['a'..'z']
 ranBigChar = ['K'..'Z']
+ste = [2,4..20]
+ste' = [3,6..20]
