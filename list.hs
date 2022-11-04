@@ -5,3 +5,5 @@ woot = ['w','o'] ++ ['o','t']
 smallCat = 'A':" SMALL CAT"
 numbers = 5:[1,2,3,4,5]
 numbers' = 5:1:2:3:4:5:[]
+stevePick = "Steve Buscemi" !! 6
+floatPick = [9.4,33.2,96.2,11.2,23.25] !! 1
