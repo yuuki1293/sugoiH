@@ -4,3 +4,4 @@ helloWorld = "hello" ++ " " ++ "world"
 woot = ['w','o'] ++ ['o','t']
 smallCat = 'A':" SMALL CAT"
 numbers = 5:[1,2,3,4,5]
+numbers' = 5:1:2:3:4:5:[]
