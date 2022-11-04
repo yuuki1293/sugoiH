@@ -9,3 +9,4 @@ cyc = take 10 (cycle [1,2,3])
 cyc' = take 12 (cycle "LOL ")
 rep = take 10 (repeat 5)
 repl = replicate 3 10
+ranFloat = [0.1, 0.3..1]
