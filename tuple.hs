@@ -5,3 +5,5 @@ fs = fst (8, 11)
 fs' = fst ("Wow", False)
 sn = snd (8, 11)
 sn' = snd ("Wow", False)
+zi = zip [1,2,3,4,5] [5,5,5,5,5]
+zi' = zip [1..5] ["one","two","three","four","five"]
