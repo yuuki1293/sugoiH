@@ -20,3 +20,7 @@ ref = read "5" :: Float
 reg = (read "5" :: Float) * 4
 reh = read "[1,2,3,4]" :: [Int]
 rei = read "(3, 'a')" :: (Int, Char)
+en = ['a'..'e']
+en' = [LT .. GT]
+en'' = [3 .. 5]
+en''' = succ 'B'
