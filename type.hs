@@ -29,3 +29,7 @@ charMax = maxBound :: Char
 boolMax = maxBound :: Bool
 boolMin = minBound :: Bool
 tupleMax = maxBound :: (Bool, Int, Char)
+int = 20 :: Int
+integer = 20 :: Integer
+float = 20 :: Float
+double = 20 :: Double
