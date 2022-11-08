@@ -8,3 +8,7 @@ ob = "Abrakadabra" `compare` "Zebra"
 oc = 5 >= 2
 od = 5 `compare` 3
 oe = 'b' > 'a'
+sh = show 3
+sh' = show 5.334
+sh'' = show True
+
