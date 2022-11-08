@@ -24,3 +24,7 @@ en = ['a'..'e']
 en' = [LT .. GT]
 en'' = [3 .. 5]
 en''' = succ 'B'
+intMin = minBound :: Int
+charMax = maxBound :: Char
+boolMax = maxBound :: Bool
+boolMin = minBound :: Bool
