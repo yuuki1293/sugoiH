@@ -28,3 +28,4 @@ intMin = minBound :: Int
 charMax = maxBound :: Char
 boolMax = maxBound :: Bool
 boolMin = minBound :: Bool
+tupleMax = maxBound :: (Bool, Int, Char)
