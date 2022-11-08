@@ -11,4 +11,7 @@ oe = 'b' > 'a'
 sh = show 3
 sh' = show 5.334
 sh'' = show True
-
+rea = read "True" || False
+reb = read "8.2" + 3.8
+rec' = read "5" - 2
+red = read "[1,2,3,4]" ++ [3]
