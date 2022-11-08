@@ -18,3 +18,8 @@ greet ::String -> String
 greet "Juan" = niceGreeting ++ " Juan!"
 greet "Fernando" = niceGreeting ++ " Fernando!"
 greet name = badGreeting ++ " " ++ name
+
+initials :: String -> String -> String
+initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
+    where (f:_) = firstname
+          (l:_) = lastname
