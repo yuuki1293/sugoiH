@@ -6,3 +6,6 @@ multTwoWithNine = multThree 9
 
 compareWithHundred :: Int -> Ordering
 compareWithHundred x = compare 100 x
+
+compareWithHundred' :: Int -> Ordering
+compareWithHundred' = compare 100
