@@ -22,3 +22,9 @@ largestDivisible = head (filter p [100000, 99999..])
 ta = takeWhile (/=' ') "elephants know how to party"
 
 sqrtUnderthousand = sum (takeWhile (<10000) (filter odd (map (^2) [1..])))
+
+chain :: Integer -> [Integer]
+chain 1 = [1]
+chain n
+    | even n = n : chain (n `div` 2)
+    | odd n = n : chain (n * 3 + 1)
