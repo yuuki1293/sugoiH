@@ -18,3 +18,5 @@ quicksort (x:xs) =
 largestDivisible :: Integer
 largestDivisible = head (filter p [100000, 99999..])
     where p x = x `mod` 3829 == 0
+
+ta = takeWhile (/=' ') "elephants know how to party"
