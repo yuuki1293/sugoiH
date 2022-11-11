@@ -7,3 +7,6 @@ chain n
 numLongChains :: Int
 numLongChains = length (filter (\xs -> length xs > 15)
                                (map chain [1..100]))
+
+ma = map (+3) [1,6,3,2]
+ma' = map (\x -> x + 3) [1,6,3,2]
