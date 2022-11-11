@@ -10,3 +10,5 @@ numLongChains = length (filter (\xs -> length xs > 15)
 
 ma = map (+3) [1,6,3,2]
 ma' = map (\x -> x + 3) [1,6,3,2]
+
+zi = zipWith (\a b -> (a * 30 + 3) / b) [5,4,3,2,1] [1,2,3,4,5]
