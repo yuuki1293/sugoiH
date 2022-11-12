@@ -31,4 +31,4 @@ sc'' = scanl1 (\acc x -> if x > acc then x else acc) [3,4,5,3,7,9,2,1]
 sc''' = scanl (flip (:)) [] [3,2,1]
 
 sqrtSums :: Int
-sqrtSums = length (takeWhile (<1000) (scanl1 (+) (map sqrt [1..])))
+sqrtSums = length (takeWhile (<1000) (scanl1 (+) (map sqrt [1..]))) + 1
