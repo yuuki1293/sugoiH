@@ -21,3 +21,9 @@ data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show)
 instance YesNo (Tree a) where
     yesno EmptyTree = False
     yesno _ = True
+
+data TrafficLight = Red | Yellow | Green
+
+instance YesNo TrafficLight where
+    yesno Red = False
+    yesno _ = True
