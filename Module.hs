@@ -1,3 +1,7 @@
 import qualified Data.Map as Map
 
-type IntMap v = Map.Map Int v
+data LockerState = Taken | Free deriving (Show, Eq)
+
+type Code = String
+
+type LockerMap = Map.Map Int (LockerState, Code)
