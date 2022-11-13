@@ -1,4 +1,6 @@
-type PhoneBook = [(String, String)]
+type PhoneNumber = String
+type Name = String
+type PhoneBook = [(Name, PhoneNumber)]
 
 phoneBook :: PhoneBook
 phoneBook =
