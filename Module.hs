@@ -6,3 +6,6 @@ firstName (Person firstname _ _ _ _ _) = firstname
 
 lastName :: Person -> String
 lastName (Person _ lastname _ _ _ _) = lastname
+
+age :: Person -> Int
+age (Person _ _ age _ _ _ ) = age
