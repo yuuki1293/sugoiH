@@ -7,3 +7,6 @@ su' = (sum . replicate 5) (max 6.7 8.9)
 su'' = sum . replicate 5 $ max 6.7 8.9
 re = replicate 2 (product (map (*3) (zipWith max [1,2] [4,5])))
 re' = replicate 2 . product . map (*3) $ zipWith max [1,2] [4,5]
+
+sum' :: (Num a) => [a] -> a
+sum' = foldl (+) 0
