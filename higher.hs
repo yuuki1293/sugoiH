@@ -10,3 +10,6 @@ re' = replicate 2 . product . map (*3) $ zipWith max [1,2] [4,5]
 
 sum' :: (Num a) => [a] -> a
 sum' = foldl (+) 0
+
+fn x = ceiling (negate (tan (cos (max 50 x))))
+fn' = ceiling . negate . tan . cos . max 50
