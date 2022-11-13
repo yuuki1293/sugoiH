@@ -15,3 +15,9 @@ instance YesNo Bool where
 instance YesNo (Maybe a) where
     yesno (Just _) = True
     yesno Nothing = False
+
+data Tree a = EmptyTree | Node a (Tree a) (Tree a) deriving (Show)
+
+instance YesNo (Tree a) where
+    yesno EmptyTree = False
+    yesno _ = True
