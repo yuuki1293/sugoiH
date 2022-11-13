@@ -6,3 +6,6 @@ phoneBook =
     ,("wendy", "939-8282")
     ,("penny", "853-2492")
     ]
+
+findKey :: (Eq k) => k -> [(k, v)] -> v
+findKey key xs = snd . head . filter (\(k, v) -> key == k) $ xs
