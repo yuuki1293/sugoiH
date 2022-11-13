@@ -9,3 +9,5 @@ phoneBook = Map.fromList $
     ,("wendy", "939-8282")
     ,("penny", "853-2492")
     ]
+
+newBook = Map.insert "grace" "341-9021" phoneBook
