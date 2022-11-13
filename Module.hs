@@ -12,3 +12,6 @@ age (Person _ _ age _ _ _ ) = age
 
 height :: Person -> Float
 height (Person _ _ _ height _ _) = height
+
+phoneNumber :: Person -> String
+phoneNumber (Person _ _ _ _ number _) = number
