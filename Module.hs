@@ -13,3 +13,13 @@ lockerLookup lockerNumber map = case Map.lookup lockerNumber map of
                             then Right code
                             else Left $ "Locker " ++ show lockerNumber
                                         ++ " is already taken!"
+
+lockers :: LockerMap
+lockers = Map.fromList
+    [(100,(Taken, "ZD39I"))
+    ,(101,(Free, "JAH3I"))
+    ,(103,(Free, "IQSA9"))
+    ,(105,(Free, "Q0TSA"))
+    ,(109,(Taken, "893JJ"))
+    ,(110,(Taken, "99292"))
+    ]
