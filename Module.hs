@@ -1,4 +1,6 @@
-phoneBook :: [(String ,String)]
+type PhoneBook = [(String, String)]
+
+phoneBook :: PhoneBook
 phoneBook =
     [("betty", "555-2938")
     ,("bonnie", "452-2928")
