@@ -1,4 +1,5 @@
 import qualified Data.Map as Map
+import Data.Char
 
 phoneBook :: Map.Map String String
 phoneBook = Map.fromList $
@@ -13,3 +14,6 @@ phoneBook = Map.fromList $
 newBook = Map.insert "grace" "341-9021" phoneBook
 sold = Map.size phoneBook
 snew = Map.size newBook
+
+string2digits :: String -> [Int]
+string2digits = map digitToInt . filter isDigit
