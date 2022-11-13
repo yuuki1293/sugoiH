@@ -1,5 +1,6 @@
 data Shape = Circle Float Float Float |
              Rectangle Float Float Float Float
+    deriving (Show)
 
 area :: Shape -> Float
 area (Circle _ _ r) = pi * r ^ 2
