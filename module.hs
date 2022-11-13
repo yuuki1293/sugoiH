@@ -13,6 +13,5 @@ phoneBook =
     ,("penny", "555-2111")
     ]
 
-phoneBookToMap :: (Ord k) => [(k, String)] -> Map.Map k String
-phoneBookToMap xs = Map.fromListWith add xs
-    where add number1 number2 = number1 ++ ", " ++ number2
+phoneBookToMap :: Ord k => [(k, a)] -> Map.Map k [a]
+phoneBookToMap xs = Map.fromListWith (++) $ map (\(k, v) -> (k, [v])) xs
