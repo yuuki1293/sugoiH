@@ -1,1 +1,3 @@
-type AssocList k v = [(k, v)]
+import Data.Map
+
+type IntMap v = Map Int v
