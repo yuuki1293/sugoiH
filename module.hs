@@ -11,3 +11,5 @@ phoneBook = Map.fromList $
     ]
 
 newBook = Map.insert "grace" "341-9021" phoneBook
+sold = Map.size phoneBook
+snew = Map.size newBook
