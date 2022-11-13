@@ -1,6 +1,1 @@
-data Person = Person { firstName :: String
-                     , lastName :: String
-                     , age :: Int
-                     , height :: Float
-                     , phoneNumber :: String
-                     , flavor :: String } deriving (Show)
+data Vector a = Vector a a a deriving (Show)
