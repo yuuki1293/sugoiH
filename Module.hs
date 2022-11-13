@@ -8,3 +8,6 @@ instance YesNo Int where
 instance YesNo [a] where
     yesno [] = False
     yesno _ = True
+
+instance YesNo Bool where
+    yesno = id
