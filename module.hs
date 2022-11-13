@@ -1,1 +1,1 @@
-import Data.List (nub, sort)
+import Data.List hiding (nub)
