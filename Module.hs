@@ -11,3 +11,7 @@ instance YesNo [a] where
 
 instance YesNo Bool where
     yesno = id
+
+instance YesNo (Maybe a) where
+    yesno (Just _) = True
+    yesno Nothing = False
