@@ -15,3 +15,6 @@ height (Person _ _ _ height _ _) = height
 
 phoneNumber :: Person -> String
 phoneNumber (Person _ _ _ _ number _) = number
+
+flavor :: Person -> String
+flavor (Person _ _ _ _ _ flavor) = flavor
