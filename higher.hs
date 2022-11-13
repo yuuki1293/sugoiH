@@ -1,5 +1,1 @@
-sua = sum (filter (> 10) (map (*2) [2..10]))
-sub = sum $ filter (> 10) (map (*2) [2..10])
-suc = sum $ filter (>10) $ map (*2) [2..10]
-
-ma = map ($ 3) [(4+), (10*), (^2), sqrt]
+maa = map (\x -> negate (abs x)) [5,-3,-6,7,-3,2,-19,24]
