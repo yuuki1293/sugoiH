@@ -1,3 +1,2 @@
 main = do
-    rs <- sequence [getLine, getLine, getLine]
-    print rs
+    mapM print [1,2,3]
