@@ -1,2 +1,7 @@
-main = do
-    mapM_ print [1,2,3]
+import Control.Monad
+import Data.Char
+
+main = forever $ do
+    putStr "Give me some input: "
+    l <- getLine
+    putStrLn $ map toUpper l
