@@ -1,6 +1,3 @@
-import Control.Monad
-
 main = do
-    input <- getLine
-    when (input == "SWORDFISH") $ do
-        putStrLn input
+    rs <- sequence [getLine, getLine, getLine]
+    print rs
