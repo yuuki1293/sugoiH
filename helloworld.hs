@@ -1,4 +1,4 @@
 main = do
-    putStr "Hey, "
-    putStr "I'm "
-    putStrLn "Andy!"
+    putChar 't'
+    putChar 'e'
+    putChar 'h'
