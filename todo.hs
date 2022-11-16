@@ -16,7 +16,6 @@ main = do
 
 add :: [String] -> IO ()
 add [fileName, todoItem] = appendFile fileName (todoItem ++ "\n")
-add _ = putStrLn "The add command takes exactly two arguments"
 
 view :: [String] -> IO ()
 view [fileName] = do
@@ -25,7 +24,6 @@ view [fileName] = do
         numberedTasks = zipWith (\n line -> show n ++ " - " ++ line)
                     [0..] todoTasks
     putStr $ unlines numberedTasks
-view _ = putStrLn "The add command takes exactly one arguments"
 
 remove :: [String] -> IO ()
 remove [fileName, numberString] = do
