@@ -28,3 +28,10 @@ roadStep (pathA, pathB) (Section a b c) =
                         then (B, b):pathB
                         else (C, c):(A, a):pathA
     in (newPathToA, newPathToB)
+
+optimalPath :: RoadSystem -> Path
+optimalPath roadSystem =
+    let (bestAPath, bestBPath) = foldl roadStep ([], []) roadSystem
+    in  if sum (map snd bestAPath) <= sum (map snd bestBPath)
+            then reverse bestAPath
+            else reverse bestBPath
