@@ -11,3 +11,6 @@ dispatch "remove" = remove
 main = do
     (command:argList) <- getArgs
     dispatch command argList
+
+add :: [String] -> IO ()
+add [fileName, todoItem] = appendFile fileName (todoItem ++ "\n")
