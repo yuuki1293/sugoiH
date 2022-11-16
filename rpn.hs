@@ -35,3 +35,8 @@ optimalPath roadSystem =
     in  if sum (map snd bestAPath) <= sum (map snd bestBPath)
             then reverse bestAPath
             else reverse bestBPath
+
+groupOf :: Int -> [a] -> [[a]]
+groupOf 0 _ = undefined
+groupOf _ [] = []
+groupOf n xs = take n xs : groupOf n (drop n xs)
