@@ -1,1 +1,1 @@
-newtype CharList = CharList { getCharList :: [Char] } deriving (Eq, Show)
+data CoolBool = CoolBool { getCoolBool :: Bool }
