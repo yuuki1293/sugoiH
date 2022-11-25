@@ -9,3 +9,9 @@ moveKnight (c,r) = do
               ]
     guard (c' `elem` [1..8] && r' `elem` [1..8])
     return (c', r')
+
+in3 :: KnightPos -> [KnightPos]
+in3 start = do
+    first <- moveKnight start
+    second <- moveKnight first
+    moveKnight second
