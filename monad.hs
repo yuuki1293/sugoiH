@@ -10,3 +10,6 @@ landRight :: Birds -> Pole -> Maybe Pole
 landRight n (left, right)
     | abs (left - (right + n)) < 4 = Just (left, right + n)
     | otherwise                    = Nothing
+
+banana :: Pole -> Maybe Pole
+banana _ = Nothing
