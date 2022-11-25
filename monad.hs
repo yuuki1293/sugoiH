@@ -12,3 +12,6 @@ moveKnight (c,r) = do
 
 in3 :: KnightPos -> [KnightPos]
 in3 start = return start >>= moveKnight >>= moveKnight >>= moveKnight
+
+canRearchIn3 :: KnightPos -> KnightPos -> Bool
+canRearchIn3 start end = end `elem` in3 start
