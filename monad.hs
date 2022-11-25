@@ -11,7 +11,4 @@ moveKnight (c,r) = do
     return (c', r')
 
 in3 :: KnightPos -> [KnightPos]
-in3 start = do
-    first <- moveKnight start
-    second <- moveKnight first
-    moveKnight second
+in3 start = return start >>= moveKnight >>= moveKnight >>= moveKnight
