@@ -1,4 +1,4 @@
 justH :: Maybe Char
 justH = do
-    (x:xs) <- Just "hello"
+    (x:xs) <- Just ""
     return x
