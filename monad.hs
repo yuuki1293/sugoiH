@@ -7,3 +7,7 @@ toDiffList xs = DiffList (xs++)
 
 formDiffList :: DiffList a -> [a]
 formDiffList (DiffList f) = f []
+
+instance Monoid (DiffList a) where
+    mempty = DiffList (\xs -> [] ++ xs)
+    (DiffList f) `mappend` (DiffList g) = DiffList (\xs -> f (g xs))
