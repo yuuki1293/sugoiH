@@ -7,4 +7,5 @@ multWithLog :: Writer [String] Int
 multWithLog = do
     a <- logNumber 3
     b <- logNumber 5
+    tell ["Gonna multiply these two"]
     return (a*b)
