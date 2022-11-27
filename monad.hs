@@ -1,6 +1,9 @@
 import Control.Monad.Writer
 
-newtype Difflist a = DiffList { getDiffList :: [a] -> [a]}
+newtype DiffList a = DiffList { getDiffList :: [a] -> [a]}
 
-toDiffList :: [a] -> Difflist a
+toDiffList :: [a] -> DiffList a
 toDiffList xs = DiffList (xs++)
+
+formDiffList :: DiffList a -> [a]
+formDiffList (DiffList f) = f []
