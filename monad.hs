@@ -21,3 +21,10 @@ stackStuff = do
         else do
             push 3
             push 8
+
+moreStack :: State Stack ()
+moreStack = do
+    a <- stackManip
+    if a == 100
+        then stackStuff
+        else return ()
