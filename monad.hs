@@ -1,8 +1,10 @@
 import Data.List
 import Control.Monad
 
-solveRPN :: String -> Double
-solveRPN = head . foldl foldingFunction [] . words
+solveRPN :: String -> Maybe Double
+solveRPN st = do
+    [result] <- foldM foldingFunction [] (words st)
+    return result
 
 foldingFunction :: [Double] -> String -> Maybe [Double]
 foldingFunction (x:y:ys) "*" = return ((y * x):ys)
