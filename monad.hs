@@ -12,3 +12,12 @@ stackManip = do
     push 3
     a <- pop
     pop
+
+stackStuff :: State Stack ()
+stackStuff = do
+    a <- pop
+    if a == 5
+        then push 5
+        else do
+            push 3
+            push 8
