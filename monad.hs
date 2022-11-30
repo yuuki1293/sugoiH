@@ -8,3 +8,6 @@ keepSmall x
     | otherwise = do
         tell [show x ++ " is too large, throwing it away"]
         return False
+
+powerset:: [a] -> [[a]]
+powerset xs = filterM (\x -> [True, False]) xs
