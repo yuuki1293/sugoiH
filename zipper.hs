@@ -26,7 +26,8 @@ attach t (_, bs) = (t, bs)
 
 topMost :: Zipper a -> Zipper a
 topMost (t, []) = (t, [])
-topMost z = topMost (goUp z)
+topMost (t, LeftCrumb x r:bs) = topMost (Node x t r, bs)
+topMost (t, RightCrumb x l:bs) = topMost (Node x l t, bs)
 
 x -: f = f x
 
