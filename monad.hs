@@ -31,3 +31,8 @@ changeToP :: Directions -> Tree Char -> Tree Char
 changeToP [] (Node _ l r) = Node 'P' l r
 changeToP (L:ds) (Node x l r) = Node x (changeToP ds l) r
 cahngeToP (R:ds) (Node x l r) = Node x l (changeToP ds r)
+
+elemAt :: Directions -> Tree a -> a
+elemAt (L:ds) (Node _ l _) = elemAt ds l
+elemAt (R:ds) (Node _ _ r) = elemAt ds r
+elemAt [] (Node x _ _) = x
