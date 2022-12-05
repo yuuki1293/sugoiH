@@ -42,6 +42,8 @@ data Crumb a = LeftCrumb a (Tree a)
 
 type Breadcrumbs a = [Crumb a]
 
+type Zipper a = (Tree a, Breadcrumbs a)
+
 goLeft :: (Tree a, Breadcrumbs a) -> (Tree a, Breadcrumbs a)
 goLeft (Node x l r, bs) = (l, LeftCrumb x r:bs)
 
