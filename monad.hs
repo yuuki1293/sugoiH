@@ -46,3 +46,6 @@ goRight :: (Tree a, Breadcrumbs) -> (Tree a, Breadcrumbs)
 goRight (Node _ _ r, bs) = (r, R:bs)
 
 x -: f = f x
+
+data Crumb a = LeftCrumb a (Tree a)
+             | RightCrumb a (Tree a) deriving (Show)
