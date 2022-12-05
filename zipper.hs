@@ -23,6 +23,10 @@ fsRename :: Name -> FSZipper -> FSZipper
 fsRename newName (Folder name items, bs) = (Folder newName items, bs)
 fsRename newName (File name dat, bs) = (File newName dat, bs)
 
+fsNewFile :: FSItem -> FSZipper -> FSZipper
+fsNewFile item (Folder folderName items, bs) =
+    (Folder folderName (item:items), bs)
+
 myDisk :: FSItem
 myDisk =
     Folder "root"
