@@ -38,3 +38,6 @@ elemAt (R:ds) (Node _ _ r) = elemAt ds r
 elemAt [] (Node x _ _) = x
 
 type Breadcrumbs = [Direction]
+
+goLeft :: (Tree a, Breadcrumbs) -> (Tree a, Breadcrumbs)
+goLeft (Node _ l _, bs) = (l, L:bs)
