@@ -37,7 +37,10 @@ elemAt (L:ds) (Node _ l _) = elemAt ds l
 elemAt (R:ds) (Node _ _ r) = elemAt ds r
 elemAt [] (Node x _ _) = x
 
-type Breadcrumbs = [Direction]
+data Crumb a = LeftCrumb a (Tree a)
+             | RightCrumb a (Tree a) deriving (Show)
+
+type Breadcrumbs a = [Crumb a]
 
 goLeft :: (Tree a, Breadcrumbs) -> (Tree a, Breadcrumbs)
 goLeft (Node _ l _, bs) = (l, L:bs)
@@ -46,6 +49,3 @@ goRight :: (Tree a, Breadcrumbs) -> (Tree a, Breadcrumbs)
 goRight (Node _ _ r, bs) = (r, R:bs)
 
 x -: f = f x
-
-data Crumb a = LeftCrumb a (Tree a)
-             | RightCrumb a (Tree a) deriving (Show)
