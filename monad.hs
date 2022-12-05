@@ -30,3 +30,5 @@ thisSituation = Prob
     [(Prob [('a',1%2),('b',1%2)], 1%4)
     ,(Prob [('c',1%2),('d',1%2)], 3%4)
     ]
+
+data Coin = Heads | Tails deriving (Show, Eq)
