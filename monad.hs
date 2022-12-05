@@ -32,3 +32,6 @@ thisSituation = Prob
     ]
 
 data Coin = Heads | Tails deriving (Show, Eq)
+
+coin :: Prob Coin
+coin = Prob [(Heads, 1%2),(Tails,1%2)]
