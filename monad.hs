@@ -26,3 +26,8 @@ freeTree =
 
 data Direction = L | R deriving (Show)
 type Directions = [Direction]
+
+changeToP :: Directions -> Tree Char -> Tree Char
+changeToP [] (Node _ l r) = Node 'P' l r
+changeToP (L:ds) (Node x l r) = Node x (changeToP ds l) r
+cahngeToP (R:ds) (Node x l r) = Node x l (changeToP ds r)
