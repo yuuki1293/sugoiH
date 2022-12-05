@@ -58,4 +58,7 @@ modify :: (a -> a) -> Zipper a -> Zipper a
 modify f (Node x l r, bs) = (Node (f x) l r, bs)
 modify f (Empty, bs) = (Empty, bs)
 
+attach :: Tree a -> Zipper a -> Zipper a
+attach t (_, bs) = (t, bs)
+
 x -: f = f x
