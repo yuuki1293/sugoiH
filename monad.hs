@@ -1,4 +1,7 @@
 import Data.Ratio
+import Control.Monad
+import System.Directory.Internal.Prelude (Applicative)
+import Control.Monad.Except (Functor)
 
 newtype Prob a = Prob { getProb :: [(a, Rational)] } deriving Show
 
@@ -9,10 +12,14 @@ flatten :: Prob (Prob a) -> Prob a
 flatten (Prob xs) = Prob $ concat $ map multAll xs
     where multAll (Prob innerxs, p) = map (\(x, r) -> (x, p*r)) innerxs
 
+instance Applicative Prob where
+    pure x = Prob [(x,1%1)]
+    Prob f <*> Prob a = Prob $ do (g, rf) <- f
+                                  (x, ra) <- a
+                                  [(g x, rf*ra)]
+
 instance Monad Prob where
-    return x = Prob [(x,1%1)]
     m >>= f = flatten (fmap f m)
-    fail _ = Prob []
 
 thisSituation :: Prob (Prob Char)
 thisSituation = Prob
