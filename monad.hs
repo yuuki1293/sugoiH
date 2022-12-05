@@ -2,6 +2,7 @@ import Data.Ratio
 import Control.Monad
 import System.Directory.Internal.Prelude (Applicative)
 import Control.Monad.Except (Functor)
+import Control.Monad.RWS.Strict (MonadFail)
 
 newtype Prob a = Prob { getProb :: [(a, Rational)] } deriving Show
 
@@ -20,6 +21,9 @@ instance Applicative Prob where
 
 instance Monad Prob where
     m >>= f = flatten (fmap f m)
+
+instance MonadFail Prob where
+    fail _ = Prob []
 
 thisSituation :: Prob (Prob Char)
 thisSituation = Prob
