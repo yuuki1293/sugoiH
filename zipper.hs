@@ -1,7 +1,3 @@
-type ListZipper a = ([a], [a])
-
-goForward :: ListZipper a -> ListZipper a
-goForward (x:xs, bs) = (xs, x:xs)
-
-goBack :: ListZipper a -> ListZipper a
-goBack (xs, b:bs) = (b:xs, bs)
+type Name = String
+type Data = String
+data FSItem = File Name Data | Folder Name [FSItem] deriving (Show)
