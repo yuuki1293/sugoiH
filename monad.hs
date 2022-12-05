@@ -24,6 +24,5 @@ freeTree =
             )
         )
 
-changeToP :: Tree Char -> Tree Char
-changeToP (Node x l (Node y (Node _ m n) r)) =
-    Node x l (Node y (Node 'P' m n))
+data Direction = L | R deriving (Show)
+type Directions = [Direction]
